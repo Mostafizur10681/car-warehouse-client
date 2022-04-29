@@ -1,0 +1,11 @@
+.link-items {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.link-items:hover {
+    color: rgb(75, 131, 133);
+}

@@ -1,4 +1,3 @@
-.hover-link:hover {
-    color: rgb(52, 235, 131);
-    text-decoration: underline;
+.navbar-items:hover {
+    color: rgb(20, 123, 65);
 }

@@ -1,4 +1,4 @@
-.link-items {
+.navbar-items {
     text-decoration: none;
     font-size: 18px;
     color: white;
@@ -6,6 +6,6 @@
     margin-left: 20px;
 }
 
-.link-items:hover {
-    color: rgb(75, 131, 133);
+.navbar-items:hover {
+    color: green;
 }

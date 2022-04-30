@@ -7,17 +7,17 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand to="/home">React-Bootstrap</Navbar.Brand>
+                <Link className='navbar-items' to='/' >React Bootstrap</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Link className='link-items' to="/features">Features</Link>
-                        <Link className='link-items' to='/blogs'>Blogs</Link>
+                        <Link className='navbar-items' to="/features">Features</Link>
+                        <Link className='navbar-items' to='/blogs'>Blogs</Link>
                     </Nav>
                     <Nav>
-                        <Link className='link-items' to="/deets">More deets</Link>
-                        <Link className='link-items' eventKey={2} to="/memes">
-                            Dank memes
+                        <Link className='navbar-items' to="/deets">More deets</Link>
+                        <Link className='navbar-items' eventKey={2} to="/login">
+                            Login
                         </Link>
                     </Nav>
                 </Navbar.Collapse>

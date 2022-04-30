@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import facebook from '../../../images/facebook.png'
@@ -9,7 +8,6 @@ import linkdin from '../../../images/linkdin.png'
 import github from '../../../images/github.png'
 import { LocationMarkerIcon, MailIcon, PhoneIcon } from '@heroicons/react/solid'
 import './Footer.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
     const [date, setDate] = useState();

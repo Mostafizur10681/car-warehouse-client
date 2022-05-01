@@ -68,17 +68,17 @@ const Login = () => {
                 <div className='col-12 col-sm-12 col-md-7 col-lg-7 p-3 login-container bg-light border rounded-3'>
                     <Form className=' mt-3' onSubmit={handleOnSubmitLogin}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                            <Form.Control ref={emailRef} type="email" placeholder="Enter Your Email" required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                            <Form.Control ref={passwordRef} type="password" placeholder="Emter Password" required />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Accept Terms & Condition" />
                         </Form.Group>
                         {errorElements}
-                        <Button variant="primary" type="submit" className='mb-2 bg-success login-button w-50 mx-auto d-block'>
+                        <Button variant="success" type="submit" className='mb-2 bg-success login-button w-50 mx-auto d-block'>
                             Login
                         </Button>
                         <p className='text-dark'>New in Car Warehouse? <Link style={{ textDecoration: 'none' }} to='/register' onClick={handleRegister}>Please Register</Link></p>

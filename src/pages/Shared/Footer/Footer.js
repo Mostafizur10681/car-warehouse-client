@@ -34,11 +34,11 @@ const Footer = () => {
                                     dolor sit amet, consectetur adipisicing elit.
                                 </p>
                                 <div>
-                                    <Link to='/facebook'><img src={facebook} className='me-2' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
-                                    <Link to='/whatsapp'><img src={whatsapp} className='me-2' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
-                                    <Link to='/instagram'><img src={instagram} className='me-2' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
-                                    <Link to='/linkdin'><img src={linkdin} className='me-2' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
-                                    <Link to='/github'><img src={github} className='me-2' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
+                                    <Link to='/facebook'><img src={facebook} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
+                                    <Link to='/whatsapp'><img src={whatsapp} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
+                                    <Link to='/instagram'><img src={instagram} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
+                                    <Link to='/linkdin'><img src={linkdin} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
+                                    <Link to='/github'><img src={github} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>
 
 
                                 </div>

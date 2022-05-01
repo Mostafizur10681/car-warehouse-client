@@ -3,7 +3,7 @@ import notFound from '../../../src/images/notFound.png'
 
 const NotFound = () => {
     return (
-        <div>
+        <div className='w-50 mx-auto'>
             <h2 className='mt-5 text-danger'>This is not avaliabe which are you looking for!!</h2>
             <img className='img-fluid' src={notFound} alt="" />
         </div>

@@ -23,8 +23,8 @@ const Banner = () => {
                 />
                 <Carousel.Caption className='mb-5'>
                     <h1 className='text-uppercase '>Brand New Car</h1>
-                    <p style={{ fontSize: '24px' }}> </p>
-                    <Button variant="outline-success mb-5">Learn More</Button>
+                    <p style={{ fontSize: '24px' }}>Visit our Warehouse and buy it Quickly</p>
+                    <Button variant="btn btn-success mb-1">Learn More</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -37,7 +37,7 @@ const Banner = () => {
                 <Carousel.Caption className='mb-5'>
                     <h1 className='text-uppercase '>Raceing Car</h1>
                     <p style={{ fontSize: '24px' }}>Top speed car, Increase speed and enjoy this.</p>
-                    <Button variant="outline-success mb-5">Learn More</Button>
+                    <Button variant="btn btn-success mb-1">Learn More</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -50,9 +50,9 @@ const Banner = () => {
                 <Carousel.Caption className='mb-5'>
                     <h1 className='text-uppercase'>Comfortable and Cheap Price Car</h1>
                     <p style={{ fontSize: '24px' }}>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        Super car with chep cost.
                     </p>
-                    <Button variant="outline-success mb-5">Learn More</Button>
+                    <Button variant="btn btn-success mb-1">Learn More</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

@@ -22,7 +22,7 @@ const Header = () => {
                         <Link className='navbar-items' to='/blogs'>Blogs</Link>
                         <Link className='navbar-items' to="/deets">More deets</Link>
                         <Link className='navbar-items' eventKey={2} to="/login">
-                            Login
+                            <button className='btn btn-success'>Login</button>
                         </Link>
                     </Nav>
                 </Navbar.Collapse>

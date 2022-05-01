@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "name": "Brakes",
+        "img": "https://i.ibb.co/ygD6kp2/jakub-sisulak-FQI8i-RD4-TNg-unsplash.png",
+        "description": "Storng break which attatched with the Engine",
+        "price": "3000",
+        "quantity": "2",
+        "supplier": "Zobayer"
+    },
+    {
+        "id": "2",
+        "name": "Colorful Light",
+        "img": "https://i.ibb.co/DYx4dTC/boris-m-Ciye-M2kvqs-unsplash.png",
+        "description": "Diffent types of color are available in Light",
+        "price": "2000",
+        "quantity": "4",
+        "supplier": "Maruf"
+    },
+    {
+        "id": "3",
+        "name": "Engine",
+        "img": "https://i.ibb.co/2gQXQHD/c-joyful-he-FTscw-GDCA-unsplash.png",
+        "description": "Highly qualified Engine",
+        "price": "5000",
+        "quantity": "2",
+        "supplier": "Mamun"
+    },
+    {
+        "id": "4",
+        "name": "Seat",
+        "img": "https://i.ibb.co/V3x6ZhH/mike-marchi-O-DZk-Rlr6-Tc-unsplash.png",
+        "description": "More comfortable Seat are availabe",
+        "price": "1500",
+        "quantity": "6",
+        "supplier": "Mofiz"
+    },
+    {
+        "id": "5",
+        "name": "Gear",
+        "img": "https://i.ibb.co/zxxtxx2/syed-ali-De3-Ax-Yt-Vrw-unsplash.png",
+        "description": "Comfortable and easy to handle Eear",
+        "price": "3000",
+        "quantity": "1",
+        "supplier": "sourav"
+    },
+    {
+        "id": "6",
+        "name": "Wheel",
+        "img": "https://i.ibb.co/JRXmvCK/serjan-midili-Og-Iik-VHAm-U-unsplash.png",
+        "description": "Strong wheel are available",
+        "price": "3000",
+        "quantity": "2",
+        "supplier": "Zobayer"
+    }
+]

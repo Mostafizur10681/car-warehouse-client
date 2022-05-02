@@ -8,6 +8,8 @@ import Blogs from './pages/Blogs/Blogs';
 import NotFound from './pages/NotFound/NotFound';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
+import InventoryDetails from './pages/InventoryDetails/InventoryDetails';
 
 
 function App() {
@@ -20,6 +22,11 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <InventoryDetails></InventoryDetails>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

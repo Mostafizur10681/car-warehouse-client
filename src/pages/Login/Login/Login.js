@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import login from '../../../images/login.png';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     let location = useLocation();
@@ -28,6 +29,9 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+    if (loading) {
+        <Loading></Loading>
+    }
     const handleOnSubmitLogin = event => {
         event.preventDefault();
         const email = emailRef.current.value;

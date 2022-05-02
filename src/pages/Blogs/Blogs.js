@@ -3,7 +3,8 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div className='container '>
-            <h1 className='my-5 text-uppercase text-success text-center'>Blogs</h1>
+            <h1 className='mt-5 text-uppercase text-success text-center'>Blogs</h1>
+            <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
             <div>
                 <div className='bg-light blog-container py-3 mt-5'>
                     <h3 className='py-2 text-uppercase text-center text-success'> Javascript VS Nodejs</h3>
@@ -13,6 +14,14 @@ const Blogs = () => {
                         Node.js also contains a large number of related libraries, which we often utilize in javascript for general-purpose programming.
                         It's a type of interpreter or environment that can represent JavaScript and run any JavaScript program. It primarily assists us in performing non-blocking operations such as retrieving operating system specific information such as certificate or hardware details;
                         we can utilize node js to accomplish this, but JavaScript standard programming will not.
+                    </p>
+                </div>
+                <div className='bg-light blog-container py-3 mt-5'>
+                    <h3 className='py-2 text-uppercase text-center text-success'>  When should you use nodejs and when should you use mongodb</h3>
+                    <p className='pb-2 text-center'>Nodejs is a Javascript engine that can be used to create any application (by programming in the Javascript language).
+                        It executes Javascript code. It is most typically used to create servers that can answer to web requests, but it may also be used to create a variety of other types of programming.
+                        MongoDB is a database management system. MongoDB is a database that is used by code within an application or server to save, query, and update data.
+                        Many web servers are developed with Nodejs and then utilize MongoDB to store data.
                     </p>
                 </div>
                 <div className='bg-light blog-container py-3 mt-5'>

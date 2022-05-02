@@ -1,11 +1,17 @@
 
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Inventory.css'
 
 const Inventory = ({ inventory }) => {
 
     const { id, name, img, description, price, quantity, supplier } = inventory;
+
+    const navigate = useNavigate();
+    const handleUpadte = (id) => {
+        navigate(`/inventory/:${id}`)
+    }
     return (
         <div className='box rounded'>
             <Card style={{ width: '22rem' }}>
@@ -25,7 +31,7 @@ const Inventory = ({ inventory }) => {
                         Supplier Name : {supplier}
                     </Card.Text>
                     <div className='d-grid gap-2'>
-                        <Button size='lg' variant="success">Update</Button>
+                        <Button onClick={() => handleUpadte({ id, name, img, description, price, quantity, supplier })} size='lg' variant="success">Update</Button>
                     </div>
 
                 </Card.Body>

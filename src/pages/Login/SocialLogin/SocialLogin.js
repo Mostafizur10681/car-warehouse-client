@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import google from '../../../images/google.png';
 import github from '../../../images/github.png';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     const navigate = useNavigate()
@@ -21,7 +22,7 @@ const SocialLogin = () => {
     }
 
     if (loading || loading1) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>;
     }
     if (user || user1) {
         navigate(from, { replace: true });

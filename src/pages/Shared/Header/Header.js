@@ -2,9 +2,16 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png'
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import './Header.css'
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -21,9 +28,12 @@ const Header = () => {
                         <Link className='navbar-items' to="/features">Features</Link>
                         <Link className='navbar-items' to='/blogs'>Blogs</Link>
                         <Link className='navbar-items' to="/deets">More deets</Link>
-                        <Link className='navbar-items' eventKey={2} to="/login">
-                            <button className='btn btn-success'>Login</button>
-                        </Link>
+                        {
+                            user ?
+                                <button onClick={logout} className='btn btn-danger ms-2'>Sign Out</button> :
+                                <Link className='navbar-items' eventKey={2} to="/login">
+                                    <button className='btn btn-success'>Login</button>
+                                </Link>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -9,8 +9,8 @@ const Inventory = ({ inventory }) => {
     const { id, name, img, description, price, quantity, supplier } = inventory;
 
     const navigate = useNavigate();
-    const handleUpadte = (id) => {
-        navigate(`/inventory/:${id}`)
+    const handleUpdate = productId => {
+        navigate(`/inventory/${productId}`)
     }
     return (
         <div className='box rounded'>
@@ -31,7 +31,7 @@ const Inventory = ({ inventory }) => {
                         Supplier Name : {supplier}
                     </Card.Text>
                     <div className='d-grid gap-2'>
-                        <Button onClick={() => handleUpadte({ id, name, img, description, price, quantity, supplier })} size='lg' variant="success">Update</Button>
+                        <Button onClick={() => handleUpdate(id)} size='lg' variant="success">Update</Button>
                     </div>
 
                 </Card.Body>

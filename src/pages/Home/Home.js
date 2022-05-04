@@ -6,13 +6,13 @@ import Banner from './Banner/Banner';
 import Inventories from './Inventories/Inventories';
 
 const Home = () => {
-    const [loading] = useAuthState(auth);
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // const [loading] = useAuthState(auth);
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
     return (
         <div>
-            {loading}
+            {/* {loading} */}
             <Banner></Banner>
             <Inventories></Inventories>
         </div>

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
@@ -8,8 +8,9 @@ import Blogs from './pages/Blogs/Blogs';
 import NotFound from './pages/NotFound/NotFound';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
-import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import InventoryDetails from './pages/InventoryDetails/InventoryDetails';
+import InventoryPage from './pages/InventoryPage/InventoryPage';
+
 
 
 function App() {
@@ -22,10 +23,9 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/inventory/:id' element={
-          <RequireAuth>
-            <InventoryDetails></InventoryDetails>
-          </RequireAuth>
+        <Route path='/inventory' element={<InventoryPage></InventoryPage>}></Route>
+        <Route path='/inventory/:productId' element={
+          <InventoryDetails></InventoryDetails>
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

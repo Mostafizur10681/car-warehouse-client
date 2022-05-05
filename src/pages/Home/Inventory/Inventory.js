@@ -15,20 +15,20 @@ const Inventory = ({ inventory }) => {
     return (
         <div className='box rounded'>
             <Card style={{ width: '22rem' }}>
-                <Card.Img width='400px' height='500px' variant="top" className='rounded' src={img} />
+                <Card.Img width='400px' height='400px' variant="top" className='rounded' src={img} />
                 <Card.Body>
                     <Card.Title className='text-uppercase text-center text-success' style={{ fontSize: '35px' }}>{name}</Card.Title>
                     <Card.Text className='text-center'>
                         {description}
                     </Card.Text>
-                    <Card.Text className='text-center'>
-                        Price : {price}
+                    <Card.Text className='text-center' style={{ fontSize: '20px' }}>
+                        Price : <span className='text-danger '>${price}</span>
                     </Card.Text>
                     <Card.Text className='text-center'>
                         Quantity : {quantity}
                     </Card.Text>
                     <Card.Text className='text-center'>
-                        Supplier Name : {supplier}
+                        Supplier: {supplier}
                     </Card.Text>
                     <div className='d-grid gap-2'>
                         <Button onClick={() => handleUpdate(id)} size='lg' variant="success">Update</Button>

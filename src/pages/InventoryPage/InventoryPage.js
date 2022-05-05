@@ -21,13 +21,14 @@ const InventoryPage = () => {
         <div className='container my-5'>
 
             <h2 className='text-center text-secondary mb-3 text-uppercase text-success'>Inventory Statement</h2>
+            <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
             <table className=''>
 
                 <thead>
 
                     <tr className='bg-custom text-light'>
                         <th scope="col">Name</th>
-                        <th scope="col">Price(per kg)</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Supplier</th>
                         <th scope="col">Quantity</th>
                         <th>Action</th>
@@ -40,7 +41,7 @@ const InventoryPage = () => {
                         cars.map(car =>
                             <tr>
                                 <td data-label="Name">{car.name}</td>
-                                <td data-label="Price(per kg)">{car.price}tk</td>
+                                <td data-label="Price(per kg)">{car.price}</td>
                                 <td data-label="Supplier">{car.supplier}</td>
                                 <td data-label="Quantity">{car.quantity}</td>
                                 <td>

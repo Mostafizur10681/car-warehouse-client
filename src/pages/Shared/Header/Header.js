@@ -25,15 +25,33 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <Link className='navbar-items' to="/inventory">Inventory</Link>
                         <Link className='navbar-items' to='/blogs'>Blogs</Link>
-                        <Link className='navbar-items' to="/deets">More deets</Link>
+                        {
+                            user ?
+                                <Link className='navbar-items' eventKey={2} to="/inventory">Manage Item</Link>
+                                :
+                                ''
+                        }
+                        {
+                            user ?
+                                <Link className='navbar-items' eventKey={2} to="/addItem">Add Item</Link>
+                                :
+                                ''
+                        }
+                        {
+                            user ?
+                                <Link className='navbar-items' eventKey={2} to="/myItem">My Item</Link>
+                                :
+                                ''
+                        }
+
                         {
                             user ?
                                 <button onClick={logout} className='btn btn-danger ms-2'>Sign Out</button> :
                                 <Link className='navbar-items' eventKey={2} to="/login">
                                     <button className='btn btn-success'>Login</button>
                                 </Link>}
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

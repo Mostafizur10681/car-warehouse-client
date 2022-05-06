@@ -6,11 +6,12 @@ import './Inventory.css'
 
 const Inventory = ({ inventory }) => {
 
-    const { id, name, img, description, price, quantity, supplier } = inventory;
+    const { _id, name, img, description, price, quantity, supplier } = inventory;
 
     const navigate = useNavigate();
-    const handleUpdate = productId => {
-        navigate(`/inventory/${productId}`)
+
+    const handleUpdate = name => {
+        navigate(`/inventory/${name}`)
     }
     return (
         <div className='box rounded'>
@@ -31,7 +32,7 @@ const Inventory = ({ inventory }) => {
                         Supplier: {supplier}
                     </Card.Text>
                     <div className='d-grid gap-2'>
-                        <Button onClick={() => handleUpdate(id)} size='lg' variant="success">Update</Button>
+                        <Button onClick={() => handleUpdate(_id)} size='lg' variant="success">Update</Button>
                     </div>
 
                 </Card.Body>

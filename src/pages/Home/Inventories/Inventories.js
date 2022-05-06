@@ -9,7 +9,7 @@ const Inventories = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
@@ -25,7 +25,7 @@ const Inventories = () => {
             <div className='inventory-conatiner container'>
                 {
                     inventories.slice(0, 6).map(inventory => <Inventory
-                        key={inventory.id}
+                        key={inventory._id}
                         inventory={inventory}
                     ></Inventory>)
                 }

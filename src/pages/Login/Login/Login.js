@@ -1,13 +1,14 @@
 import React, { useRef } from 'react';
 import { Button, Form, Toast, ToastContainer } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import 'react-toastify/dist/ReactToastify.css';
+
 import login from '../../../images/login.png';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import Loading from '../../Shared/Loading/Loading';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     let location = useLocation();
@@ -24,6 +25,7 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    const [sendEmailVerification] = useSendEmailVerification(auth);
 
     if (user) {
         navigate(from, { replace: true });
@@ -56,10 +58,10 @@ const Login = () => {
         console.log(email);
         if (email) {
             await sendPasswordResetEmail(email);
-            Toast('Sent email');
+            toast('Sent email');
         }
         else {
-            Toast('Please enter your email address');
+            toast('Please enter your email address');
         }
     }
     return (

@@ -10,8 +10,8 @@ const Inventory = ({ inventory }) => {
 
     const navigate = useNavigate();
 
-    const handleUpdate = name => {
-        navigate(`/inventory/${name}`)
+    const handleUpdate = id => {
+        navigate(`/inventory/${id}`)
     }
     return (
         <div className='box rounded'>

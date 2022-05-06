@@ -19,6 +19,28 @@ const InventoryPage = () => {
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure yo want to delete?')
+        if (proceed) {
+            console.log('delete item', id)
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deleteCount > 0) {
+                        const remaining = cars.filter(car => car._id !== id);
+                        setCars(remaining)
+                    }
+                })
+        }
+    }
+
+    const handleAddItem = () => {
+        navigate('/addItem')
+    }
     return (
         <div className='container my-5'>
 
@@ -49,7 +71,7 @@ const InventoryPage = () => {
                                 <td data-label="Quantity">{car.quantity}</td>
                                 <td>
                                     <button onClick={() => handleUpdate(car._id)} className=' text-dark btn fs-6 border-3 border-success rounded-pill me-1'><FontAwesomeIcon className='fs-6 text-success me-1' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span >Update</span></button>
-                                    <button className=' text-dark btn fs-6 border-3 border-danger rounded-pill'><FontAwesomeIcon className=' fs-6 text-danger ' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span>Delete</span></button>
+                                    <button onClick={() => handleDelete(car._id)} className=' text-dark btn fs-6 border-3 border-danger rounded-pill'><FontAwesomeIcon className=' fs-6 text-danger ' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span>Delete</span></button>
                                 </td>
                             </tr>
                         )
@@ -58,7 +80,7 @@ const InventoryPage = () => {
 
             </table>
 
-            <Button variant="outline-success mx-auto d-block mt-4 mb-5">Add New Item</Button>
+            <Button onClick={() => handleAddItem()} variant="outline-success mx-auto d-block mt-4 mb-5">Add New Item</Button>
         </div>
     );
 };

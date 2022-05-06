@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
-import { Button, Form, Toast, ToastContainer } from 'react-bootstrap';
+import 'react-toastify/dist/ReactToastify.css';
+import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-
 import login from '../../../images/login.png';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import Loading from '../../Shared/Loading/Loading';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
     let location = useLocation();
@@ -78,7 +78,7 @@ const Login = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control ref={passwordRef} type="password" placeholder="Emter Password" required />
+                            <Form.Control ref={passwordRef} type="password" placeholder="Enter Password" required />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Accept Terms & Condition" />

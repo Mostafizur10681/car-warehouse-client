@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Modal } from 'react-bootstrap';
+import { Button, Card, Form, Modal } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
@@ -25,6 +25,12 @@ const InventoryDetails = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true)
+
+    const handleReStore = event => {
+        event.preventDefault();
+        const reStore = event.target.reStore.value;
+        console.log(reStore)
+    }
     return (
         <div className='container mx-auto w-50 my-5'>
             <div className="card mb-3" style={{ maxWidth: '700px' }}>
@@ -39,8 +45,8 @@ const InventoryDetails = () => {
                             <h6 className="card-text fs-6">Price: <span className='text-danger'>${productDetails.price}</span></h6>
                             <p className="card-text">Quantity: {productDetails.quantity}</p>
                             <p className="card-text">Supplier: {productDetails.supplier}</p>
-                            <button type="button" className="btn btn-success">Delivered</button>
-                            <button onClick={handleShow} type="button" class="btn btn-danger ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" className="btn btn-success my-3">Delivered</button>
+                            <button onClick={handleShow} type="button" className="btn btn-danger ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Re-Stock
                             </button>
                         </div>
@@ -49,17 +55,19 @@ const InventoryDetails = () => {
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Re-Store Inventory Product</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>{productDetails.name}</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-
-                    <Button variant="primary" onClick={handleClose}>
+                    <form className='mx-auto' onSubmit={handleReStore}>
+                        <div className="input-group  mb-3">
+                            <input type="text" name='reStore' className="form-control" placeholder="Enter Quantity" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <button className="btn btn-outline-success" type="submit" id="button-addon2">Add</button>
+                        </div>
+                    </form>
+                    {/* <Button variant="success" className='mb-2' onClick={handleClose}>
                         Add
-                    </Button>
+                    </Button> */}
                 </Modal.Footer>
             </Modal>
             <button type="button" onClick={() => handleManageInventory()} className="btn btn-outline-success p-2 d-block mx-auto py-3 fw-bold shadow px-5 mt-3 mb-5 rounded-pill">Manage Inventories</button>

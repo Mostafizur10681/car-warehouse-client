@@ -1,6 +1,8 @@
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './InventoryPage.css'
 
@@ -13,7 +15,7 @@ const InventoryPage = () => {
         navigate(`/inventory/${productId}`)
     }
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
@@ -22,6 +24,7 @@ const InventoryPage = () => {
 
             <h2 className='text-center text-secondary mb-3 text-uppercase text-success'>Inventory Statement</h2>
             <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
+
             <table className=''>
 
                 <thead>
@@ -45,7 +48,7 @@ const InventoryPage = () => {
                                 <td data-label="Supplier">{car.supplier}</td>
                                 <td data-label="Quantity">{car.quantity}</td>
                                 <td>
-                                    <button onClick={() => handleUpdate(car.id)} className=' text-dark btn fs-6 border-3 border-success rounded-pill me-1'><FontAwesomeIcon className='fs-6 text-success me-1' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span >Update</span></button>
+                                    <button onClick={() => handleUpdate(car._id)} className=' text-dark btn fs-6 border-3 border-success rounded-pill me-1'><FontAwesomeIcon className='fs-6 text-success me-1' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span >Update</span></button>
                                     <button className=' text-dark btn fs-6 border-3 border-danger rounded-pill'><FontAwesomeIcon className=' fs-6 text-danger ' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span>Delete</span></button>
                                 </td>
                             </tr>
@@ -55,7 +58,7 @@ const InventoryPage = () => {
 
             </table>
 
-
+            <Button variant="outline-success mx-auto d-block mt-4 mb-5">Add New Item</Button>
         </div>
     );
 };

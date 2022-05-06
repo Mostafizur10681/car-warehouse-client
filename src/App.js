@@ -11,6 +11,7 @@ import Register from './pages/Login/Register/Register';
 import InventoryDetails from './pages/InventoryDetails/InventoryDetails';
 import InventoryPage from './pages/InventoryPage/InventoryPage';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth'
+import AddInventory from './pages/AddInventory/AddInventory';
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <InventoryDetails></InventoryDetails>
           </RequireAuth>
         }></Route>
+        <Route path='/addItem' element={<AddInventory></AddInventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

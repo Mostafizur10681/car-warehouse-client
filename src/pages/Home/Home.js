@@ -4,6 +4,9 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import Banner from './Banner/Banner';
 import Inventories from './Inventories/Inventories';
+import Reviews from './Reviews/Reviews';
+import Services from './Services/Services';
+
 
 const Home = () => {
     // const [loading] = useAuthState(auth);
@@ -15,6 +18,8 @@ const Home = () => {
             {/* {loading} */}
             <Banner></Banner>
             <Inventories></Inventories>
+            <Services></Services>
+            <Reviews></Reviews>
         </div>
     );
 };

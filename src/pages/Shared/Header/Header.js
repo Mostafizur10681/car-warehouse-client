@@ -28,7 +28,7 @@ const Header = () => {
                         <Link className='navbar-items' to='/blogs'>Blogs</Link>
                         {
                             user ?
-                                <Link className='navbar-items' eventKey={2} to="/inventory">Manage Item</Link>
+                                <Link className='navbar-items' eventKey={2} to="/inventory">Manage Inventory</Link>
                                 :
                                 ''
                         }
@@ -40,7 +40,7 @@ const Header = () => {
                         }
                         {
                             user ?
-                                <Link className='navbar-items' eventKey={2} to="/myItem">My Item</Link>
+                                <Link className='navbar-items' eventKey={2} to="/myItem">My Items</Link>
                                 :
                                 ''
                         }

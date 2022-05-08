@@ -6,8 +6,8 @@ import './Services.css'
 const Services = () => {
     return (
         < div className='mb-5' >
-            <h1 className='mt-3 mb-2 text-center text-uppercase text-success'>Our Inventories Packages</h1>
-            <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
+            <h1 className='mt-3 mb-2 text-center text-uppercase text-success'>Our Service Packages</h1>
+            <hr style={{ width: '40%', margin: '0  auto' }} className='mb-4' />
             <div className="wrapper">
                 <input type="radio" name="slider" id="tab-1" />
                 <input type="radio" name="slider" id="tab-2" checked />
@@ -22,38 +22,38 @@ const Services = () => {
                     <div className="cards">
                         <div className="row row-1">
                             <div className="price-details">
-                                <span className="price">19</span>
-                                <p>For beginner use</p>
+                                <span className="price">10k</span>
+                                <p>For Regular use</p>
                             </div>
                             <ul className="features ms-3">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>100 GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>One FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>1 month free washing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>1 Month free servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Guaranteed savings on your car servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Discounts on all included services and an additional discount of 10% on Non-Package Services.</span></li>
                             </ul>
                         </div>
                         <div className="row">
                             <div className="price-details">
-                                <span className="price">99</span>
+                                <span className="price">40k</span>
                                 <p>For professional use</p>
                             </div>
                             <ul className="features ms-3">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Five FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>3 month free washing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>3 Month free servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Guaranteed savings on your car servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Discounts on all included services and an additional discount of 40% on Non-Package Services.</span></li>
                             </ul>
                         </div>
                         <div className="row">
                             <div className="price-details">
-                                <span className="price">49</span>
+                                <span className="price">25k</span>
                                 <p>For team collaboration</p>
                             </div>
                             <ul className="features ms-5">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>200 GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Two FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>2 month free washing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>2 Month free servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Guaranteed savings on your car servicing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Discounts on all included services and an additional discount of 25% on Non-Package Services.</span></li>
                             </ul>
                         </div>
                     </div>

@@ -32,8 +32,6 @@ const InventoryDetails = () => {
 
     const addQuantity = event => {
         event.preventDefault();
-        // const value = event.target.restore.value;
-        // console.log(value)
         const input = inputRef.current.value;
         fetch(`http://localhost:5000/inventory/increase/${productId}`, {
             method: 'PUT',
@@ -81,7 +79,7 @@ const InventoryDetails = () => {
                             <p className="card-text">Supplier: {productDetails.supplier}</p>
                             <button type="button" onClick={handleDelivered} className="btn btn-success my-3">Delivered</button>
                             <button onClick={handleShow} type="button" className="btn btn-danger ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Re-Stock
+                                Re-Store
                             </button>
                         </div>
                     </div>
@@ -99,9 +97,7 @@ const InventoryDetails = () => {
                             <button onClick={addQuantity} className="btn btn-outline-success" type="submit" id="button-addon2">Add</button>
                         </div>
                     </form>
-                    {/* <Button variant="success" className='mb-2' onClick={handleClose}>
-                        Add
-                    </Button> */}
+
                 </Modal.Footer>
             </Modal>
             <button type="button" onClick={() => handleManageInventory()} className="btn btn-outline-success p-2 d-block mx-auto py-3 fw-bold shadow px-5 mt-3 mb-5 rounded-pill">Manage Inventories</button>

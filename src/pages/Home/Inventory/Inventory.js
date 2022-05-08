@@ -18,7 +18,7 @@ const Inventory = ({ inventory }) => {
             <Card style={{ width: '22rem' }}>
                 <Card.Img width='400px' height='400px' variant="top" className='rounded' src={img} />
                 <Card.Body>
-                    <Card.Title className='text-uppercase text-center text-success' style={{ fontSize: '35px' }}>{name}</Card.Title>
+                    <Card.Title className='text-uppercase fs-3 fw-3 text-center text-success' style={{ fontSize: '35px' }}>{name}</Card.Title>
                     <Card.Text className='text-center'>
                         {description}
                     </Card.Text>

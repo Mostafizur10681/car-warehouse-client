@@ -27,11 +27,10 @@ const Footer = () => {
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold mb-4 text-white">
-                                    Company name
+                                    Car WareHouse
                                 </h6>
                                 <p className='text-white'>
-                                    Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                    dolor sit amet, consectetur adipisicing elit.
+                                    All kind of car are available. We are import brand new car from many countries
                                 </p>
                                 <div>
                                     <Link to='/facebook'><img src={facebook} className='me-3' style={{ width: '26px', height: '26px' }} alt="" srcset="" /></Link>

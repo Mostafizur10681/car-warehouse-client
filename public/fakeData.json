@@ -1,74 +1,74 @@
 [
     {
-        "id": "1",
         "name": "Audi Q7",
         "img": "https://i.ibb.co/0Qv0LMj/tyler-clemmensen-4g-Sav-S9pe1s-unsplash.png",
         "description": "Audi AG is a German automotive manufacturer of luxury vehicles headquartered in Ingolstadt, Bavaria, Germany. As a subsidiary of its parent company, the Volkswagen Group",
         "price": "500k",
-        "quantity": "5",
+        "quantity": 5,
+        "email" : "audi@gmail.com",
         "supplier": "Audi"
     },
     {
-        "id": "2",
         "name": "BMW 3",
         "img": "https://i.ibb.co/8Yt80my/serjan-midili-lc-ZUS-b-80-unsplash.png",
         "description": "Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational corporate manufacturer of luxury vehicles and motorcycles headquartered in Munich, Bavaria, Germany",
         "price": "1300k",
-        "quantity": "4",
+        "quantity": 4,
+        "email" : "bmw@gmail.com",
         "supplier": "BMW"
     },
     {
-        "id": "3",
         "name": "Mercedes Benz",
         "img": "https://i.ibb.co/rQ9bvBm/daniil-lyusov-am01b-O64b8s-unsplash.png",
         "description": "Mercedes-Benz, commonly referred to as Mercedes, is a German luxury automotive brand. Both Mercedes-Benz and Mercedes-Benz AG are headquartered in Stuttgart, Baden-Württemberg, Germany. ",
         "price": "1300k",
-        "quantity": "6",
+        "quantity": 6,
+        "email" : "mercedes@gmail.com",
         "supplier": "Mercedes"
     },
     {
-        "id": "4",
         "name": "Honda Civic",
         "img": "https://i.ibb.co/Xt9S6Gb/dzmitry-tselabionak-HWUX9-YGXPSY-unsplash.png",
         "description": "Honda Motor Company, Ltd. is a Japanese public multinational conglomerate manufacturer of automobiles, motorcycles, and power equipment, headquartered in Minato, Tokyo, Japan.",
         "price": "400k",
-        "quantity": "6",
+        "quantity": 6,
+        "email" : "honda@gmail.com",
         "supplier": "Honda"
     },
     {
-        "id": "5",
         "name": "Ford Mustang",
         "img": "https://i.ibb.co/m052215/martin-zdrazil-Yp000em9-Oik-unsplash.png",
         "description": "Ford Motor Company is an American multinational automobile manufacturer headquartered in Dearborn, Michigan, United States. It was founded by Henry Ford and incorporated on June 16, 1903",
         "price": "1000k",
-        "quantity": "2",
+        "quantity": 4,
+        "email" : "ford@gmail.com",
         "supplier": "Ford"
     },
     {
-        "id": "6",
         "name": "Chevrolet Cruze",
         "img": "https://i.ibb.co/hVH32qx/giorgio-trovato-pv-KUr8riv0w-unsplash.png",
         "description": "Chevrolet, colloquially referred to as Chevy and formally the Chevrolet Division of General Motors Company, is an American automobile division of the American manufacturer General Motors",
         "price": "900k",
-        "quantity": "8",
+        "quantity": 8,
+        "email" : "chevrolet@gmail.com",
         "supplier": "Chevrolet"
     },
     {
-        "id": "7",
         "name": "BMW 5",
         "img": "https://i.ibb.co/6W2FGgd/red-luxury-sedan-road.png",
         "description": "Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational corporate manufacturer of luxury vehicles and motorcycles headquartered in Munich, Bavaria, Germany",
         "price": "1300k",
-        "quantity": "4",
+        "quantity": 4,
+        "email" : "bmw1@gmail.com",
         "supplier": "BMW"
     },
     {
-        "id": "8",
         "name": "cadillac",
         "img": "https://i.ibb.co/C1PvW6N/black-bmw-decorated-with-white-wedding-bouquets.png",
         "description": "The Cadillac Motor Car Division is a division of the American automobile manufacturer General Motors Company that designs and builds luxury vehicles. Its major markets are the United States,",
         "price": "800k",
-        "quantity": "1",
+        "quantity": 1,
+        "email" : "cadillac@gmail.com",
         "supplier": "cadillac"
     }
 ]

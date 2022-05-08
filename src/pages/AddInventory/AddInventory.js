@@ -26,7 +26,7 @@ const AddInventory = () => {
                 <textarea className='mb-2' placeholder='Description' {...register("description",)} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price",)} />
                 <input className='mb-2' placeholder='Supplier' {...register("supplier", { required: true, maxLength: 20 })} />
-                <input className='mb-2' placeholder='Quantity' {...register("quantity", { required: true, maxLength: 20 })} />
+                <input className='mb-2' type='number' placeholder='Quantity' {...register("quantity", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Photo URL' type='text' {...register("img",)} />
                 <input type="submit" value='Add Inventory' className='btn-success py-2 rounded' />
             </form>

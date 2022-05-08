@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -14,7 +13,7 @@ const MyItem = () => {
 
         const getNewInventory = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myInventory?email=${email}`;
+            const url = `https://quiet-beyond-84134.herokuapp.com/myInventory?email=${email}`;
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,17 +31,12 @@ const MyItem = () => {
     const handleUpdate = productId => {
         navigate(`/inventory/${productId}`)
     }
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/inventory')
-    //         .then(res => res.json())
-    //         .then(data => setItems(data))
-    // }, [])
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')
         if (proceed) {
             console.log('delete item', id)
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://quiet-beyond-84134.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

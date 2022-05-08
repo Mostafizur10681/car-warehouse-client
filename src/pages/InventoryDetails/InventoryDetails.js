@@ -10,7 +10,7 @@ const InventoryDetails = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${productId}`;
+        const url = `https://quiet-beyond-84134.herokuapp.com/inventory/${productId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const InventoryDetails = () => {
     const addQuantity = event => {
         event.preventDefault();
         const input = inputRef.current.value;
-        fetch(`http://localhost:5000/inventory/increase/${productId}`, {
+        fetch(`https://quiet-beyond-84134.herokuapp.com/inventory/increase/${productId}`, {
             method: 'PUT',
             headers: {
 
@@ -54,7 +54,7 @@ const InventoryDetails = () => {
     }
 
     const handleDelivered = () => {
-        fetch(`http://localhost:5000/inventory/decrease/${productId}`, {
+        fetch(`https://quiet-beyond-84134.herokuapp.com/inventory/decrease/${productId}`, {
             method: 'PUT',
 
         })

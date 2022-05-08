@@ -51,10 +51,10 @@ const Footer = () => {
                                     <Link to='/blogs' className=" text-white text-decoration-none hover-link">Blogs</Link>
                                 </p>
                                 <p>
-                                    <Link to='/shop' className=" text-white text-decoration-none hover-link">Shop</Link>
+                                    <Link to='/inventory' className=" text-white text-decoration-none hover-link">Manage Inventory</Link>
                                 </p>
                                 <p>
-                                    <Link to='/inventory' className=" text-white text-decoration-none hover-link">Inventory</Link>
+                                    <Link to='/login' className=" text-white text-decoration-none hover-link">Login</Link>
                                 </p>
                                 <p>
                                     <Link to='/TermsCondition' className=" text-white text-decoration-none hover-link">Terms & Condition</Link>

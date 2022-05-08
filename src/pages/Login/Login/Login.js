@@ -9,12 +9,15 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import Loading from '../../Shared/Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
 
 const Login = () => {
+    let errorElements;
     let location = useLocation();
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
+
     let from = location.state?.from?.pathname || "/";
     const [
         signInWithEmailAndPassword,
@@ -27,22 +30,25 @@ const Login = () => {
 
     const [sendEmailVerification] = useSendEmailVerification(auth);
 
-    if (user) {
-        navigate(from, { replace: true });
-    }
+
 
     if (loading) {
         <Loading></Loading>
     }
-    const handleOnSubmitLogin = event => {
+    const handleOnSubmitLogin = async (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
-        const password = passwordRef.current.value
-        console.log(email, password)
-        signInWithEmailAndPassword(email, password)
+        const password = passwordRef.current.value;
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
-    let errorElements;
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
 
     if (error) {
         errorElements = <div>

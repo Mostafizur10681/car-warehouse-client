@@ -23,7 +23,7 @@ const Services = () => {
                         <div className="row row-1">
                             <div className="price-details">
                                 <span className="price">10k</span>
-                                <p>For Regular use</p>
+                                <p>For Regular </p>
                             </div>
                             <ul className="features ms-3">
                                 <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>1 month free washing</span></li>
@@ -35,7 +35,7 @@ const Services = () => {
                         <div className="row">
                             <div className="price-details">
                                 <span className="price">40k</span>
-                                <p>For professional use</p>
+                                <p>For professional </p>
                             </div>
                             <ul className="features ms-3">
                                 <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>3 month free washing</span></li>
